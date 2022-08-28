@@ -6,26 +6,13 @@ const router = express.Router();
 
 console.log("fucker")
 
-router.get("/", (req, res) => {
-  res.json({
-    hello: "hi!"
-  });
-});
-
-router.get('/test',(req,res) => {
-    res.json({
-        hello: "test!"
-      });
-
+app.get('/', (res,res) =>{
+  res.send('HelloWorld');
 })
 
-router.post('/testpost',(req,res) => {
-    res.json({
-        hello: "hit the POST!"
-      });
+app.listen(8000, ()=>{
+  console.log('port listening')
 })
-
-app.use(`/.netlify/functions/api`, router);
 
 module.exports = app;
 module.exports.handler = serverless(app);
