@@ -6,7 +6,7 @@ const router = express.Router();
 
 console.log("fucker")
 
-app.get('/', (res,res) =>{
+app.get('/', (req,res) =>{
   res.send('HelloWorld');
 })
 
