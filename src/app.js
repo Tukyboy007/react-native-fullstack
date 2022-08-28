@@ -4,15 +4,13 @@ const serverless = require("serverless-http");
 const app = express();
 const router = express.Router();
 
-console.log("fucker")
+router.get("/", (req, res) => {
+  res.json({
+    hello: "hi!"
+  });
+});
 
-app.get('/', (req,res) =>{
-  res.send('HelloWorld');
-})
-
-app.listen(8000, ()=>{
-  console.log('port listening')
-})
+app.use(`/api`, router);
 
 module.exports = app;
 module.exports.handler = serverless(app);
