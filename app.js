@@ -4,6 +4,8 @@ const serverless = require("serverless-http");
 const app = express();
 const router = express.Router();
 
+console.log("fucker")
+
 router.get("/", (req, res) => {
   res.json({
     hello: "hi!"
