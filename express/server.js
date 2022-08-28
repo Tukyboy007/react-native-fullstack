@@ -10,9 +10,6 @@ router.get('/', (req, res) => {
   res.send('HelLObITCH')
 });
 
-app.get('/api', (req,res)=>{
-  res.send('HelLObITCH');
-});
 
 app.get('/', (req,res) => {
   res.send('HelLObITCH')
